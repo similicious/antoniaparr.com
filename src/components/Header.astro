@@ -1,8 +1,15 @@
-<section class="header">
+---
+import SidebarToggle from "./SidebarToggle.astro";
+---
+
+<section class="header py-4">
   <h6 class="tagline">Kostüme • Styling • Mode • Kunst</h6>
   <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-12 col-md-8 mb-4">
+    <div class="row g-0">
+      <div class="col-1 offset-md-1">
+        <SidebarToggle position="header" />
+      </div>
+      <div class="col-10 col-md-8 mb-4">
         <slot />
       </div>
     </div>
@@ -11,7 +18,7 @@
 
 <style>
   .tagline {
-    font-family: Oliver;
+    font-family: Oliver, serif;
     color: var(--color-red);
     text-align: center;
     letter-spacing: 0.25rem;
@@ -21,6 +28,5 @@
 
   .header {
     background-color: var(--color-blue);
-    padding: 2rem;
   }
 </style>

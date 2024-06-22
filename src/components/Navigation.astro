@@ -1,0 +1,51 @@
+---
+import SidebarToggle from "./SidebarToggle.astro";
+---
+
+<aside>
+  <SidebarToggle position="aside" />
+  <nav>
+    <ul>
+      <li><a href="Sawerf">aweff</a></li>
+      <li><a href="awef">aweff</a></li>
+      <li><a href="wef">aweff</a></li>
+    </ul>
+  </nav>
+</aside>
+
+<style>
+  aside {
+    padding: 2rem;
+    position: fixed;
+    top: 0;
+    left: -50%;
+    bottom: 0;
+    min-width: 50%;
+    background-color: var(--color-salmon);
+    transition: left 0.3s ease-in-out;
+  }
+
+  aside.show {
+    display: block;
+    left: 0;
+  }
+
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+
+  li {
+    list-style: none;
+    margin: 0;
+    font-family: AvenirNextCondensedHeavy, sans-serif;
+    margin-bottom: 1rem;
+  }
+
+  li a {
+    color: var(--color-red);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+  }
+</style>

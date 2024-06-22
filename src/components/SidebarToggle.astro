@@ -1,0 +1,29 @@
+---
+import hamburger from "@app/images/hamburger.svg?raw";
+
+interface Props {
+  position: "header" | "aside";
+}
+
+const { position } = Astro.props;
+---
+
+<button class="hamburger-button mb-4" data-position={position}>
+  <Fragment set:html={hamburger} />
+</button>
+
+<style>
+  .hamburger-button {
+    fill: var(--color-red);
+    border: none;
+    background: transparent;
+    padding: 0;
+  }
+</style>
+
+<script define:vars={{ position }}>
+  const aside = document.querySelector("aside");
+  const button = document.querySelector(`button[data-position="${position}"]`);
+
+  button?.addEventListener("click", () => aside?.classList.toggle("show"));
+</script>

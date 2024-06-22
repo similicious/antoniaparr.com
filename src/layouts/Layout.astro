@@ -11,6 +11,7 @@ import "bootstrap/dist/css/bootstrap.css";
 import Cloud from "@app/components/Cloud.astro";
 import Header from "@app/components/Header.astro";
 import Frame from "@app/components/Frame.astro";
+import Navigation from "@app/components/Navigation.astro";
 ---
 
 <!doctype html>
@@ -24,6 +25,7 @@ import Frame from "@app/components/Frame.astro";
     <title>{title}</title>
   </head>
   <body>
+    <Navigation />
     <Header>
       <Frame />
     </Header>
