@@ -6,10 +6,11 @@ interface Props {
 
 const { title, cloudTitle } = Astro.props;
 
+import "@app/css/main.css";
 import "bootstrap/dist/css/bootstrap.css";
-import Cloud from "../components/Cloud.astro";
-import Header from "../components/Header.astro";
-import Frame from "../components/Frame.astro";
+import Cloud from "@app/components/Cloud.astro";
+import Header from "@app/components/Header.astro";
+import Frame from "@app/components/Frame.astro";
 ---
 
 <!doctype html>
@@ -31,40 +32,4 @@ import Frame from "../components/Frame.astro";
 
     <slot />
   </body>
-  <style is:global>
-    @font-face {
-      font-family: AvenirNextCondensedHeavy;
-      src: url("public/fonts/AvenirNextCondensed-Heavy.otf") format("opentype");
-      font-style: normal;
-      font-weight: bold;
-    }
-
-    @font-face {
-      font-family: Oliver;
-      src: url("public/fonts/Oliver-Regular.ttf") format("opentype");
-      font-style: normal;
-      font-weight: normal;
-    }
-
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-      font-family: AvenirNextCondensedHeavy;
-      color: var(--color-red);
-    }
-
-    body {
-      background-color: #fefefe;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='59' height='59' viewBox='0 0 100 100'%3E%3Cg stroke='%239598AE' stroke-width='0' stroke-opacity='0.29'%3E%3Crect fill='%23D9DEFE' x='-60' y='-60' width='110' height='240'/%3E%3C/g%3E%3C/svg%3E");
-    }
-
-    :root {
-      --color-blue: #6b7fba;
-      --color-red: #ff2900;
-      --bs-heading-color: var(--color-red);
-    }
-  </style>
 </html>

@@ -3,13 +3,14 @@ interface Props {
   title: string;
 }
 
+import cloud from "@app/images/cloud.webp";
 const { title } = Astro.props;
 ---
 
 <div class="container cloud-container">
   <div class="row justify-content-center">
     <div class="col-7 col-md-5 col-lg-3">
-      <section class="cloud">
+      <section class="cloud" style={`background-image: url(${cloud.src})`}>
         <h1 class="h4">{title}</h1>
       </section>
     </div>
@@ -22,7 +23,6 @@ const { title } = Astro.props;
   }
 
   .cloud {
-    background-image: url("public/images/cloud.webp");
     background-size: contain;
     background-repeat: no-repeat;
     aspect-ratio: 2.19;
