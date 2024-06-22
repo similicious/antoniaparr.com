@@ -5,4 +5,33 @@ import Layout from "@app/layouts/Layout.astro";
 
 <Layout title="Startseite" cloudTitle="Antonia Parr">
   <Frame slot="header" />
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-10 col-md-6">
+        <section class="intro text-center mt-4 mx-2 mx-auto">
+          <div>
+            <h3>Hi und Willkommen!</h3>
+            <p>
+              Ich bin Antonia und ich entwerfe, fertige sowie style
+              leidenschaftlich alles was mit Kostümen und Mode zutun hat.
+            </p>
+            <p class="mb-0">Ich freue mich auf kreative Zusammenarbeit!</p>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
 </Layout>
+
+<style>
+  .intro {
+    background-color: white;
+    padding: 1rem;
+    border-radius: 2rem;
+
+    border: solid white;
+    border-width: 3px 4px 3px 5px;
+    border-radius: 95% 4% 92% 5%/4% 95% 6% 95%;
+  }
+</style>
