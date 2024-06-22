@@ -21,7 +21,7 @@ const { position } = Astro.props;
   }
 </style>
 
-<script define:vars={{ position }}>
+<script define:vars={{ position }} is:inline>
   const aside = document.querySelector("aside");
   const button = document.querySelector(`button[data-position="${position}"]`);
 
