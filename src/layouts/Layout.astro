@@ -1,9 +1,15 @@
 ---
 interface Props {
   title: string;
+  cloudTitle: string;
 }
 
-const { title } = Astro.props;
+const { title, cloudTitle } = Astro.props;
+
+import "bootstrap/dist/css/bootstrap.css";
+import Cloud from "../components/Cloud.astro";
+import Header from "../components/Header.astro";
+import Frame from "../components/Frame.astro";
 ---
 
 <!doctype html>
@@ -17,11 +23,43 @@ const { title } = Astro.props;
     <title>{title}</title>
   </head>
   <body>
+    <Header>
+      <Frame />
+    </Header>
+
+    <Cloud title={cloudTitle} />
+
     <slot />
   </body>
+  <style is:global>
+    @font-face {
+      font-family: AvenirNextCondensedHeavy;
+      src: url("public/fonts/AvenirNextCondensed-Heavy.otf") format("opentype");
+      font-style: normal;
+      font-weight: bold;
+    }
+
+    @font-face {
+      font-family: Oliver;
+      src: url("public/fonts/Oliver-Regular.ttf") format("opentype");
+      font-style: normal;
+      font-weight: normal;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-family: AvenirNextCondensedHeavy;
+      color: var(--color-red);
+    }
+
+    :root {
+      --color-blue: #6b7fba;
+      --color-red: #ff2900;
+      --bs-heading-color: var(--color-red);
+    }
+  </style>
 </html>
-<style is:global>
-  :root {
-    --color-blue: #6b7fba;
-  }
-</style>

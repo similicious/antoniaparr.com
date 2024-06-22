@@ -13,9 +13,11 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "astro": "^4.11.0",
+    "bootstrap": "^5.3.3",
     "typescript": "^5.5.2"
   },
   "devDependencies": {
+    "@types/bootstrap": "^5",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0"
   }

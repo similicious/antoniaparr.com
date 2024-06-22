@@ -1,0 +1,26 @@
+<section class="header">
+  <h6 class="tagline">Kostüme • Styling • Mode • Kunst</h6>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-8 mb-4">
+        <slot />
+      </div>
+    </div>
+  </div>
+</section>
+
+<style>
+  .tagline {
+    font-family: Oliver;
+    color: var(--color-red);
+    text-align: center;
+    letter-spacing: 0.25rem;
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  .header {
+    background-color: var(--color-blue);
+    padding: 2rem;
+  }
+</style>

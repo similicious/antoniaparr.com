@@ -1,13 +1,14 @@
 ---
+import Frame from "../components/Frame.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
-<Layout title="Startseite">
-  <section class="header">awef</section>
+<Layout title="Startseite" cloudTitle="Antonia Parr">
+  <Frame slot="header" />
 </Layout>
 
 <style>
-  section.header {
-    background-color: var(--color-blue);
+  .frame {
+    width: 100%;
   }
 </style>
