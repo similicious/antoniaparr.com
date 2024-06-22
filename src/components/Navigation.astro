@@ -18,17 +18,16 @@ import SidebarToggle from "./SidebarToggle.astro";
     padding: 2rem;
     position: fixed;
     top: 0;
-    left: -50%;
+    transform: translateX(-100%);
     bottom: 0;
     min-width: 50%;
     background-color: var(--color-salmon);
-    transition: left 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out;
     z-index: 1;
   }
 
   aside.show {
-    display: block;
-    left: 0;
+    transform: translateX(0);
   }
 
   ul {
