@@ -1,0 +1,31 @@
+---
+import Cloud from "@app/components/Cloud.astro";
+import Infobox from "@app/components/Infobox.astro";
+import Layout from "@app/layouts/Layout.astro";
+---
+
+<Layout showTagline={false} title="Über mich">
+  <Cloud slot="header"><a href="/">Über mich</a></Cloud>
+
+  <div class="container my-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <Infobox shadow={true}>
+          <div class="p-4">
+            <h3>Kontakt</h3>
+
+            <p>
+              <a href="mailto:hallo@antoniaparr.com">hallo@antoniaparr.com</a>
+            </p>
+
+            <p class="m-0">
+              Antonia Parr <br />
+              Wöhlerstr. 24<br />
+              50823 Köln
+            </p>
+          </div>
+        </Infobox>
+      </div>
+    </div>
+  </div>
+</Layout>
