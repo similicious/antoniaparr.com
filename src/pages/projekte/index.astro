@@ -20,23 +20,27 @@ const projects = await getCollection("projects").then((collection) => {
   <Cloud slot="header">Projekte</Cloud>
 
   <div class="container my-4">
-    <div class="row justify-content-center g-5">
-      {
-        projects.map((project) => (
-          <div class="col-10 col-md-5">
-            <a class="project-link" href={`/projekte/${project.slug}`}>
-              <Image src={project.data.icon} alt={project.data.title} />
-              <div class="project-title">
-                <Infobox>
-                  <h3 class="h6 text-uppercase m-0 pt-1">
-                    {project.data.title}
-                  </h3>
-                </Infobox>
+    <div class="row justify-content-center">
+      <div class="col-8 col-sm-10">
+        <div class="row g-5 row-cols-1 row-cols-sm-2 row-cols-lg-3">
+          {
+            projects.map((project) => (
+              <div class="col">
+                <a class="project-link" href={`/projekte/${project.slug}`}>
+                  <Image src={project.data.icon} alt={project.data.title} />
+                  <div class="project-title">
+                    <Infobox>
+                      <h3 class="h6 text-uppercase m-0 pt-1">
+                        {project.data.title}
+                      </h3>
+                    </Infobox>
+                  </div>
+                </a>
               </div>
-            </a>
-          </div>
-        ))
-      }
+            ))
+          }
+        </div>
+      </div>
     </div>
   </div>
 </Layout>
