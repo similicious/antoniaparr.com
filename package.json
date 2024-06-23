@@ -1,7 +1,6 @@
 {
   "name": "antoniaparr.com",
   "private": true,
-  "type": "module",
   "version": "0.0.1",
   "scripts": {
     "dev": "astro dev",
@@ -20,5 +19,6 @@
     "@types/bootstrap": "^5",
     "prettier": "^3.3.2",
     "prettier-plugin-astro": "^0.14.0"
-  }
+  },
+  "packageManager": "yarn@4.3.1"
 }
