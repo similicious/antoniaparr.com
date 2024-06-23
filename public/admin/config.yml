@@ -1,0 +1,78 @@
+backend:
+  name: github
+  repo: similicious/antoniaparr.com
+  commit_messages:
+    create: "content: create {{collection}} “{{slug}}”"
+    update: "content: update {{collection}} “{{slug}}”"
+    delete: "content: delete {{collection}} “{{slug}}”"
+    uploadMedia: "content: upload “{{path}}”"
+    deleteMedia: "content: delete “{{path}}”"
+    openAuthoring: "content: '{{message}}'"
+site_url: https://antoniaparr.com
+display_url: https://antoniaparr.com
+media_folder: src/assets/user
+public_folder: src/assets/user
+collections:
+  - name: projects
+    slug: "{{year}}-{{slug}}"
+    label: Projekte
+    folder: src/content/projects
+    create: true
+    fields:
+      - label: Name
+        name: title
+        widget: string
+      - label: Kunde
+        name: client
+        widget: string
+      - label: Datum
+        name: date
+        widget: datetime
+      - label: Beschreibung
+        name: description
+        widget: text
+      - label: Kategorie
+        name: category
+        widget: select
+        options:
+          - Kostüm
+          - Styling
+          - Modedesign
+          - Maßschnitt
+      - label: Links
+        name: links
+        widget: list
+        allow_add: true
+        field:
+          label: Link
+          name: link
+          widget: string
+      - label: Icon
+        name: icon
+        widget: image
+        choose_url: false
+        allow_multiple: false
+        media_library:
+          config:
+            max_file_size: 2000000
+      - label: Gallerie
+        name: gallery
+        widget: list
+        allow_add: true
+        field:
+          label: Bild und Beschreibung
+          name: imageAndDescription
+          widget: object
+          fields:
+            - label: Image
+              name: image
+              widget: image
+              choose_url: false
+              allow_multiple: false
+              media_library:
+                config:
+                  max_file_size: 2000000
+            - label: Beschreibung
+              name: description
+              widget: string
+
