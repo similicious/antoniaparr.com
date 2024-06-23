@@ -18,12 +18,6 @@ import frame from "@app/assets/frame.webp";
     overflow: hidden;
   }
 
-  .video-container video,
-  .video-container img {
-    width: 98%;
-    height: auto;
-  }
-
   .video-frame {
     position: absolute;
     top: 0;
@@ -33,5 +27,13 @@ import frame from "@app/assets/frame.webp";
     background-size: contain;
     background-repeat: no-repeat;
     pointer-events: none; /* This is important. It enables click-through */
+  }
+</style>
+
+<style is:global>
+  .video-container video,
+  .video-container img {
+    width: 98%;
+    height: auto;
   }
 </style>
