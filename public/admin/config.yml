@@ -1,6 +1,7 @@
 backend:
   name: github
   repo: similicious/antoniaparr.com
+  site_domain: antoniaparr.com
   commit_messages:
     create: "content: create {{collection}} “{{slug}}”"
     update: "content: update {{collection}} “{{slug}}”"
