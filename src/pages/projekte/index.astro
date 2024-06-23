@@ -19,7 +19,7 @@ const projects = await getCollection("projects").then((collection) => {
 <Layout title="Projekte" showTagline={false}>
   <Cloud slot="header">Projekte</Cloud>
 
-  <div class="container mt-4">
+  <div class="container my-4">
     <div class="row justify-content-center g-5">
       {
         projects.map((project) => (

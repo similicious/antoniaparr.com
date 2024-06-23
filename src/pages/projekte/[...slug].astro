@@ -43,16 +43,11 @@ const { entry } = Astro.props;
   {
     entry.data.gallery && (
       <div class="gallery-container">
-        <div class="container">
-          <div class="row">
-            <div class="col-12" />
-            <Carousel
-              images={entry.data.gallery.map(
-                (item) => item.imageAndDescription
-              )}
-              alt={entry.data.title}
-            />
-          </div>
+        <div class="container-md">
+          <Carousel
+            images={entry.data.gallery.map((item) => item.imageAndDescription)}
+            alt={entry.data.title}
+          />
         </div>
       </div>
     )
@@ -107,7 +102,7 @@ const { entry } = Astro.props;
 
   .gallery-container {
     background-color: var(--color-blue);
-    padding: 2rem;
+    padding: 2rem 0;
   }
 </style>
 
