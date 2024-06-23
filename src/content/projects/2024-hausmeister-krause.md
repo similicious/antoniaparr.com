@@ -14,4 +14,6 @@ gallery:
       description: ""
   - imageAndDescription:
       image: src/assets/user/hausmeister-kraus-3.jpg
+  - imageAndDescription:
+      image: src/assets/user/hausmeister-kraus-4.jpg
 ---
