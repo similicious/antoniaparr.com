@@ -23,7 +23,7 @@ const projectsCollection = defineCollection({
           z.object({
             imageAndDescription: z.object({
               image: image(),
-              description: z.string(),
+              description: z.string().optional(),
             }),
           }),
         )
