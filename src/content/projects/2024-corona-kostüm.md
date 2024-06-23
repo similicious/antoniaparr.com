@@ -11,5 +11,4 @@ gallery:
       image: src/assets/user/d586b1c4-46b7-4b31-8298-bfb7621d0c82.jpeg
   - imageAndDescription:
       image: src/assets/user/fc24e022-6176-4e13-a27c-cfab4d010cb8.jpeg
-icon: src/assets/user/corona-kostum-min.png
 ---
