@@ -1,5 +1,6 @@
 ---
 import hamburger from "@app/assets/hamburger.svg?raw";
+import x from "@app/assets/x.svg?raw";
 
 interface Props {
   position: "header" | "aside";
@@ -9,7 +10,7 @@ const { position } = Astro.props;
 ---
 
 <button class="hamburger-button mb-4" data-position={position}>
-  <Fragment set:html={hamburger} />
+  <Fragment set:html={position === "header" ? hamburger : x} />
 </button>
 
 <style>
