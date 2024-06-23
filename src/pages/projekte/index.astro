@@ -4,6 +4,7 @@ import { Image } from "astro:assets";
 import { createSlug } from "@app/util/create-slug";
 import Layout from "@app/layouts/Layout.astro";
 import Cloud from "@app/components/Cloud.astro";
+import Infobox from "@app/components/Infobox.astro";
 
 const projects = await getCollection("projects").then((collection) => {
   return collection
@@ -19,12 +20,19 @@ const projects = await getCollection("projects").then((collection) => {
   <Cloud slot="header">Projekte</Cloud>
 
   <div class="container mt-4">
-    <div class="row justify-content-center">
+    <div class="row justify-content-center gy-5">
       {
         projects.map((project) => (
           <div class="col-10 col-md-5">
-            <a href={`/projekte/${project.slug}`}>
+            <a class="project-link" href={`/projekte/${project.slug}`}>
               <Image src={project.data.icon} alt={project.data.title} />
+              <div class="project-title">
+                <Infobox>
+                  <h3 class="h6 text-uppercase m-0 pt-1">
+                    {project.data.title}
+                  </h3>
+                </Infobox>
+              </div>
             </a>
           </div>
         ))
@@ -34,6 +42,18 @@ const projects = await getCollection("projects").then((collection) => {
 </Layout>
 
 <style>
+  .project-link {
+    display: block;
+    position: relative;
+  }
+
+  .project-title {
+    position: absolute;
+    bottom: 0px;
+    right: -40px;
+    z-index: 2;
+  }
+
   img {
     width: 100%;
     height: auto;

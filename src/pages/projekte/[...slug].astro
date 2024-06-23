@@ -23,7 +23,7 @@ const { entry } = Astro.props;
 
 <Layout title={entry.data.title} showTagline={false}>
   <Cloud slot="header">
-    <a href="/">Projekte</a>
+    <a href="/projekte">Projekte</a>
   </Cloud>
 
   <!-- Icon -->
@@ -63,28 +63,30 @@ const { entry } = Astro.props;
     <div class="row justify-content-center">
       <div class="col-10">
         <Infobox>
-          <h3>{entry.data.title}</h3>
-          <p>{entry.data.date.getFullYear()}</p>
-          {
-            entry.data.description && (
-              <p class="m-0">{entry.data.description}</p>
-            )
-          }
-          {
-            entry.data.links && (
-              <p>
-                <ul class="list-unstyled m-0">
-                  {entry.data.links.map(({ linkAndTitle }) => (
-                    <li>
-                      <a href={linkAndTitle.link} target="_blank">
-                        {linkAndTitle.linkTitle}
-                      </a>
-                    </li>
-                  ))}
-                </ul>
-              </p>
-            )
-          }
+          <div class="p-3">
+            <h3>{entry.data.title}</h3>
+            <p>{entry.data.date.getFullYear()}</p>
+            {
+              entry.data.description && (
+                <p class="m-0">{entry.data.description}</p>
+              )
+            }
+            {
+              entry.data.links && (
+                <p>
+                  <ul class="list-unstyled m-0">
+                    {entry.data.links.map(({ linkAndTitle }) => (
+                      <li>
+                        <a href={linkAndTitle.link} target="_blank">
+                          {linkAndTitle.linkTitle}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
+                </p>
+              )
+            }
+          </div>
         </Infobox>
       </div>
     </div>
