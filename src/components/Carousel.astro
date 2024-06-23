@@ -15,19 +15,25 @@ const { images, alt } = Astro.props;
 <div class="row gx-1 justify-content-center">
   <div class="col-1 d-flex justify-content-center">
     <button class="button-previous">
-      <Image src={arrowLeft} alt="Vorheriges Bild" style={imageWidth} />
+      <Image
+        src={arrowLeft}
+        alt="Vorheriges Bild"
+        loading="eager"
+        style={imageWidth}
+      />
     </button>
   </div>
   <div class="col-10">
     <section class="embla">
       <div class="embla__container">
         {
-          images.map(({ description, image }) => (
+          images.map(({ image, description }, index) => (
             <div class="embla__slide">
               <Image
                 src={image}
                 alt={description ?? alt}
                 style="width: 100%; height: 100%; object-fit: contain;"
+                loading={index === 0 ? "eager" : "lazy"}
               />
             </div>
           ))
@@ -38,7 +44,12 @@ const { images, alt } = Astro.props;
   </div>
   <div class="col-1 d-flex justify-content-center">
     <button class="button-next">
-      <Image src={arrowRight} alt="Vorheriges Bild" style={imageWidth} />
+      <Image
+        src={arrowRight}
+        alt="Vorheriges Bild"
+        loading="eager"
+        style={imageWidth}
+      />
     </button>
   </div>
 </div>
