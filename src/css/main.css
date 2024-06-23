@@ -1,8 +1,15 @@
 @font-face {
-  font-family: AvenirNextCondensedHeavy;
+  font-family: AvenirNextCondensed;
+  src: url("/fonts/AvenirNextCondensed-Regular.otf") format("opentype");
+  font-style: normal;
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: AvenirNextCondensed;
   src: url("/fonts/AvenirNextCondensed-Heavy.otf") format("opentype");
   font-style: normal;
-  font-weight: bold;
+  font-weight: 500;
 }
 
 @font-face {
@@ -14,6 +21,7 @@
 
 :root {
   --color-blue: #6b7fba;
+  --color-light-blue: #99abe1;
   --color-red: #ff2900;
   --color-salmon: #fdaeae;
 }
@@ -24,7 +32,8 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: AvenirNextCondensedHeavy, sans-serif;
+  font-family: AvenirNextCondensed, sans-serif;
+  font-weight: bold;
   --bs-heading-color: var(--color-red);
 }
 

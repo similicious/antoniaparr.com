@@ -1,13 +1,9 @@
 ---
 import frame from "@app/assets/frame.webp";
-import video from "@app/assets/video.webm";
 ---
 
 <div class="video-container">
-  <video autoplay muted>
-    <source src={video} type="video/webm" />
-    Your browser does not support the video tag.
-  </video>
+  <slot />
   <div class="video-frame" style={`background-image: url(${frame.src})`}></div>
 </div>
 
@@ -19,9 +15,11 @@ import video from "@app/assets/video.webm";
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
   }
 
-  .video-container video {
+  .video-container video,
+  .video-container img {
     width: 98%;
     height: auto;
   }

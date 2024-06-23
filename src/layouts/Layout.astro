@@ -1,17 +1,20 @@
 ---
 interface Props {
   title: string;
-  cloudTitle: string;
 }
 
-const { title, cloudTitle } = Astro.props;
+const { title } = Astro.props;
 
 import "@app/css/main.css";
 import "bootstrap/dist/css/bootstrap.css";
-import Cloud from "@app/components/Cloud.astro";
 import Header from "@app/components/Header.astro";
-import Frame from "@app/components/Frame.astro";
 import Navigation from "@app/components/Navigation.astro";
+
+interface Props {
+  showTagline: boolean;
+}
+
+const { showTagline } = Astro.props;
 ---
 
 <!doctype html>
@@ -26,11 +29,10 @@ import Navigation from "@app/components/Navigation.astro";
   </head>
   <body>
     <Navigation />
-    <Header>
-      <Frame />
+    <Header showTagline={showTagline}>
+      <slot name="header" />
     </Header>
 
-    <Cloud title={cloudTitle} />
     <slot />
   </body>
 </html>

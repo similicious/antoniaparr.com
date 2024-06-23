@@ -1,9 +1,15 @@
 ---
 import SidebarToggle from "./SidebarToggle.astro";
+
+interface Props {
+  showTagline: boolean;
+}
+
+const { showTagline } = Astro.props;
 ---
 
 <section class="header py-4">
-  <h2 class="tagline">Kostüme • Styling • Mode • Kunst</h2>
+  {showTagline && <h2 class="tagline">Kostüme • Styling • Mode • Kunst</h2>}
   <div class="container">
     <div class="row g-0">
       <div class="col-1 offset-md-1">
