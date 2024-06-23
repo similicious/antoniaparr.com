@@ -25,7 +25,9 @@ const { entry } = Astro.props;
 ---
 
 <Layout title={entry.data.title} showTagline={false}>
-  <Cloud title={entry.data.title} slot="header" />
+  <Cloud slot="header">
+    <a href="/">Projekte</a>
+  </Cloud>
 
   <!-- Icon -->
   <section class="container icon-container">
@@ -72,18 +74,21 @@ const { entry } = Astro.props;
   }
 
   <!-- Info -->
-
   <div class="container mt-4">
     <div class="row justify-content-center">
       <div class="col-10">
         <Infobox>
+          <h3>{entry.data.title}</h3>
           <p>{entry.data.date.getFullYear()}</p>
-          <p class="m-0">{entry.data.description}</p>
-
+          {
+            entry.data.description && (
+              <p class="m-0">{entry.data.description}</p>
+            )
+          }
           {
             entry.data.links && (
               <p>
-                <ul class="list-unstyled">
+                <ul class="list-unstyled m-0">
                   {entry.data.links.map(({ linkAndTitle }) => (
                     <li>
                       <a href={linkAndTitle.link} target="_blank">

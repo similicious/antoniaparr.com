@@ -1,14 +1,9 @@
 ---
-interface Props {
-  title: string;
-}
-
 import cloud from "@app/assets/cloud.webp";
-const { title } = Astro.props;
 ---
 
 <section class="cloud" style={`background-image: url(${cloud.src})`}>
-  <h1 class="h4 m-0 mt-2">{title}</h1>
+  <h1 class="h4 m-0 mt-2"><slot /></h1>
 </section>
 
 <style>
@@ -22,5 +17,12 @@ const { title } = Astro.props;
     align-items: center;
     max-width: 300px;
     text-transform: uppercase;
+  }
+</style>
+
+<style is:global>
+  .cloud h1.h4 a {
+    color: var(--bs-heading-color);
+    text-decoration: none;
   }
 </style>
