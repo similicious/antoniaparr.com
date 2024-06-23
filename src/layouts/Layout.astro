@@ -9,6 +9,7 @@ import "@app/css/main.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Header from "@app/components/Header.astro";
 import Navigation from "@app/components/Navigation.astro";
+import CloudsBackground from "@app/components/CloudsBackground.astro";
 
 interface Props {
   showTagline: boolean;
@@ -28,6 +29,7 @@ const { showTagline } = Astro.props;
     <title>{title} • Antonia Parr</title>
   </head>
   <body>
+    <CloudsBackground />
     <Navigation />
     <Header showTagline={showTagline}>
       <slot name="header" />
