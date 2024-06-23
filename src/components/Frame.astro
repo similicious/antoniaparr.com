@@ -2,13 +2,13 @@
 import frame from "@app/assets/frame.webp";
 ---
 
-<div class="video-container">
+<div class="frame-container">
   <slot />
-  <div class="video-frame" style={`background-image: url(${frame.src})`}></div>
+  <div class="frame" style={`background-image: url(${frame.src})`}></div>
 </div>
 
 <style>
-  .video-container {
+  .frame-container {
     position: relative;
     aspect-ratio: 1.42;
     width: 100%;
@@ -18,7 +18,7 @@ import frame from "@app/assets/frame.webp";
     overflow: hidden;
   }
 
-  .video-frame {
+  .frame {
     position: absolute;
     top: 0;
     left: 0;
@@ -31,8 +31,8 @@ import frame from "@app/assets/frame.webp";
 </style>
 
 <style is:global>
-  .video-container video,
-  .video-container img {
+  .frame-container video,
+  .frame-container img {
     width: 98%;
     height: auto;
   }
