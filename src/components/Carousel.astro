@@ -80,10 +80,16 @@ const { images, alt } = Astro.props;
 <script
   is:inline
   src="https://unpkg.com/embla-carousel@8.1.5/embla-carousel.umd.js"></script>
+<script
+  is:inline
+  src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"
+></script>
+
 <script is:inline>
   const emblaNode = document.querySelector(".embla");
   const options = { loop: true };
-  const emblaApi = EmblaCarousel(emblaNode, options);
+  const plugins = [EmblaCarouselAutoplay()];
+  const emblaApi = EmblaCarousel(emblaNode, options, plugins);
 
   const previous = document.querySelector("button.button-previous");
   const next = document.querySelector("button.button-next");
