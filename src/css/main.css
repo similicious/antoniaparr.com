@@ -22,7 +22,7 @@
 :root {
   --color-blue: #6b7fba;
   --color-light-blue: #99abe1;
-  --color-red: #ff2900;
+  --color-red: rgba(255, 41, 0, 1);
   --color-salmon: #fdaeae;
 }
 
@@ -35,6 +35,10 @@ h6 {
   font-family: AvenirNextCondensed, sans-serif;
   font-weight: bold;
   --bs-heading-color: var(--color-red);
+}
+
+.infobox a {
+  color: var(--color-red);
 }
 
 body {
