@@ -6,10 +6,12 @@ import Layout from "@app/layouts/Layout.astro";
 import Cloud from "@app/components/Cloud.astro";
 
 const projects = await getCollection("projects").then((collection) => {
-  return collection.map((entry) => ({
-    ...entry,
-    slug: `${entry.data.date.getFullYear()}-${createSlug(entry.data.title)}`,
-  }));
+  return collection
+    .map((entry) => ({
+      ...entry,
+      slug: `${entry.data.date.getFullYear()}-${createSlug(entry.data.title)}`,
+    }))
+    .sort((a, b) => a.data.date.valueOf() - b.data.date.valueOf());
 });
 ---
 
