@@ -23,7 +23,10 @@ const { position } = Astro.props;
 
 <script define:vars={{ position }} is:inline>
   const aside = document.querySelector("aside");
+  const overlay = document.querySelector(".overlay");
   const button = document.querySelector(`button[data-position="${position}"]`);
 
-  button?.addEventListener("click", () => aside?.classList.toggle("show"));
+  aside?.addEventListener("click", (e) => e.stopPropagation());
+  overlay?.addEventListener("click", () => overlay.classList.remove("show"));
+  button?.addEventListener("click", () => overlay?.classList.toggle("show"));
 </script>
