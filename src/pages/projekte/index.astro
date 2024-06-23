@@ -1,0 +1,39 @@
+---
+import { getCollection } from "astro:content";
+import { Image } from "astro:assets";
+import { createSlug } from "@app/util/create-slug";
+import Layout from "@app/layouts/Layout.astro";
+import Cloud from "@app/components/Cloud.astro";
+
+const projects = await getCollection("projects").then((collection) => {
+  return collection.map((entry) => ({
+    ...entry,
+    slug: `${entry.data.date.getFullYear()}-${createSlug(entry.data.title)}`,
+  }));
+});
+---
+
+<Layout title="Projekte" showTagline={false}>
+  <Cloud title="Projekte" slot="header" />
+
+  <div class="container mt-4">
+    <div class="row justify-content-center">
+      {
+        projects.map((project) => (
+          <div class="col-10 col-md-5">
+            <a href={`/projekte/${project.slug}`}>
+              <Image src={project.data.icon} alt={project.data.title} />
+            </a>
+          </div>
+        ))
+      }
+    </div>
+  </div>
+</Layout>
+
+<style>
+  img {
+    width: 100%;
+    height: auto;
+  }
+</style>
