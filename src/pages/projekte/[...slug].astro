@@ -28,9 +28,9 @@ const { entry } = Astro.props;
   <Cloud title={entry.data.title} slot="header" />
 
   <!-- Icon -->
-  <section class="container">
+  <section class="container icon-container">
     <div class="row justify-content-center">
-      <div class="col-6 col-md-6 col-lg-4">
+      <div class="col-5 col-md-6 col-lg-4">
         <Image
           src={entry.data.icon}
           alt={`Illustration von ${entry.data.title}`}
@@ -102,6 +102,11 @@ const { entry } = Astro.props;
 </Layout>
 
 <style>
+  .icon-container {
+    margin-top: -2rem;
+    margin-bottom: -1rem;
+  }
+
   button {
     background: transparent;
     border: none;
