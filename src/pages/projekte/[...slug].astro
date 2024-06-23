@@ -9,11 +9,14 @@ import Frame from "@app/components/Frame.astro";
 import arrowLeft from "@app/assets/arrow-left.webp";
 import arowRight from "@app/assets/arrow-right.webp";
 import Infobox from "@app/components/Infobox.astro";
+import { createSlug } from "@app/util/create-slug";
 
 export async function getStaticPaths() {
   const projects = await getCollection("projects");
   return projects.map((entry) => ({
-    params: { slug: entry.slug },
+    params: {
+      slug: `${entry.data.date.getFullYear()}-${createSlug(entry.data.title)}`,
+    },
     props: { entry },
   }));
 }
