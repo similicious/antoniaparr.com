@@ -1,17 +1,19 @@
 ---
 import Layout from "@app/layouts/Layout.astro";
 
-import video from "@app/assets/video.webm";
 import Cloud from "@app/components/Cloud.astro";
 import Infobox from "@app/components/Infobox.astro";
 import BetterFrame from "@app/components/BetterFrame.astro";
+
+import videoMp4 from "@app/assets/homepage-video.mp4";
+import videoWebm from "@app/assets/homepage-video.webm";
 ---
 
 <Layout title="Startseite" showTagline={true}>
   <BetterFrame slot="header">
     <video autoplay muted loop>
-      <source src={video} type="video/webm" />
-      Your browser does not support the video tag.
+      <source src={videoWebm} type="video/webm" />
+      <source src={videoMp4} type="video/mp4" />
     </video>
   </BetterFrame>
 
