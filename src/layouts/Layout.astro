@@ -33,6 +33,8 @@ const { showTagline } = Astro.props;
       <slot name="header" />
     </Header>
 
-    <slot />
+    <article class="my-5">
+      <slot />
+    </article>
   </body>
 </html>

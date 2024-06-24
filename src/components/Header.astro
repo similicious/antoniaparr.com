@@ -12,10 +12,10 @@ const { showTagline } = Astro.props;
   {showTagline && <h2 class="tagline">Kostüme • Styling • Mode • Kunst</h2>}
   <div class="container">
     <div class="row g-0">
-      <div class="col-1 offset-md-1">
+      <div class="col-1 offset-md-1 offset-lg-2">
         <SidebarToggle position="header" />
       </div>
-      <div class="col-10 col-md-8 mb-4">
+      <div class="col-10 col-md-8 col-lg-6 mb-4">
         <slot />
       </div>
     </div>

@@ -10,6 +10,7 @@ import videoWebm from "@app/assets/homepage-video.webm";
 ---
 
 <Layout title="Startseite" showTagline={true}>
+  <!-- Video -->
   <BetterFrame slot="header">
     <video autoplay muted loop>
       <source src={videoWebm} type="video/webm" />
@@ -17,6 +18,7 @@ import videoWebm from "@app/assets/homepage-video.webm";
     </video>
   </BetterFrame>
 
+  <!-- Cloud -->
   <div class="cloud-container">
     <div class="container">
       <div class="row justify-content-center">
@@ -27,9 +29,10 @@ import videoWebm from "@app/assets/homepage-video.webm";
     </div>
   </div>
 
+  <!-- Content -->
   <div class="container mt-4">
     <div class="row justify-content-center">
-      <div class="col-10 col-md-6">
+      <div class="col-10 col-md-6 col-lg-4">
         <Infobox>
           <div class="p-3">
             <h3>Hi und Willkommen!</h3>
@@ -47,6 +50,6 @@ import videoWebm from "@app/assets/homepage-video.webm";
 
 <style>
   .cloud-container {
-    margin-top: -2rem;
+    margin-top: -5.5rem;
   }
 </style>
