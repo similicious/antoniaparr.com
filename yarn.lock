@@ -1379,6 +1379,8 @@ __metadata:
     "@types/bootstrap": "npm:^5"
     astro: "npm:^4.11.0"
     bootstrap: "npm:^5.3.3"
+    embla-carousel: "npm:^8.1.5"
+    embla-carousel-autoplay: "npm:^8.1.5"
     prettier: "npm:^3.3.2"
     prettier-plugin-astro: "npm:^0.14.0"
     typescript: "npm:^5.5.2"
@@ -1951,6 +1953,22 @@ __metadata:
   version: 1.4.810
   resolution: "electron-to-chromium@npm:1.4.810"
   checksum: 10c0/0fed53e156aab30d71f2d6fd3bcd818755cee6aab3316e497c1f92424b4ef628f9faf1cf3cc2b4bcacc91c6a58d4e610202c4aa23cf91d7fbe77f82144bdc0ba
+  languageName: node
+  linkType: hard
+
+"embla-carousel-autoplay@npm:^8.1.5":
+  version: 8.1.5
+  resolution: "embla-carousel-autoplay@npm:8.1.5"
+  peerDependencies:
+    embla-carousel: 8.1.5
+  checksum: 10c0/1798bdff3684e579cadabe5e2667405a0313dd348d398194f958a7e4d840d256026e9650856bbd4045d785b04ec4a02fa0f9e7f598cfd6b68f13689dbd497812
+  languageName: node
+  linkType: hard
+
+"embla-carousel@npm:^8.1.5":
+  version: 8.1.5
+  resolution: "embla-carousel@npm:8.1.5"
+  checksum: 10c0/5fa18cf332654ce3f380874e41caa6a520a04c5d43f2832f1d797b74e822f271de61f27346155fc3a8321633f1968b7b808ad0d56152305c8696ff5d12d3200f
   languageName: node
   linkType: hard
 

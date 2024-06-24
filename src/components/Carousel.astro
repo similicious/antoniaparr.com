@@ -88,27 +88,30 @@ const { images, alt } = Astro.props;
     padding: 0;
   }
 </style>
-<script
-  is:inline
-  src="https://unpkg.com/embla-carousel@8.1.5/embla-carousel.umd.js"></script>
-<script
-  is:inline
-  src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"
-></script>
 
-<script is:inline>
-  const emblaNode = document.querySelector(".embla");
-  const options = { loop: true };
-  const plugins = [EmblaCarouselAutoplay()];
-  const emblaApi = EmblaCarousel(emblaNode, options, plugins);
+<script>
+  import EmblaCarousel from "embla-carousel";
+  import EmblaCarouselAutoplay from "embla-carousel-autoplay";
 
-  const previous = document.querySelector("button.button-previous");
-  const next = document.querySelector("button.button-next");
+  initializeCarousel();
+  function initializeCarousel() {
+    const emblaNode = document.querySelector<HTMLDivElement>(".embla");
 
-  previous?.addEventListener("click", () => {
-    emblaApi.scrollPrev();
-  });
-  next?.addEventListener("click", () => {
-    emblaApi.scrollNext();
-  });
+    if (!emblaNode) return;
+
+    const options = { loop: true };
+    const plugins = [EmblaCarouselAutoplay()];
+    const emblaApi = EmblaCarousel(emblaNode, options, plugins);
+
+    const previous = document.querySelector("button.button-previous");
+    const next = document.querySelector("button.button-next");
+
+    previous?.addEventListener("click", () => {
+      emblaApi.scrollPrev();
+    });
+
+    next?.addEventListener("click", () => {
+      emblaApi.scrollNext();
+    });
+  }
 </script>
