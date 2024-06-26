@@ -12,9 +12,11 @@
   "dependencies": {
     "@astrojs/check": "^0.7.0",
     "astro": "^4.11.0",
+    "astro-purgecss": "^4.1.1",
     "bootstrap": "^5.3.3",
     "embla-carousel": "^8.1.5",
     "embla-carousel-autoplay": "^8.1.5",
+    "purgecss": "^6.0.0",
     "typescript": "^5.5.2"
   },
   "devDependencies": {
