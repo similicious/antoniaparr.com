@@ -1,26 +1,41 @@
 ---
-import frame from "@app/assets/frame.webp";
+import frame from "@app/assets/frame-prop.webp";
 ---
 
-<section class="frame-container position-relative">
-  <slot />
-
-  <div class="frame" style={`border-image-source: url(${frame.src})`}></div>
+<section class="frame-container" style={`--frame-url: url(${frame.src})`}>
+  <div class="content">
+    <slot />
+  </div>
 </section>
 
 <style>
-  .frame {
+  .frame-container {
+    position: relative;
+    aspect-ratio: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .frame-container::after {
+    display: block;
+    content: "";
+
     position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
 
-    border-image-slice: 76 58 82 76;
-    border-image-width: 20px 20px 20px 20px;
-    border-image-outset: 0px;
-    border-image-repeat: stretch stretch;
+    background-image: var(--frame-url);
+    background-size: contain;
+
     pointer-events: none;
+  }
+
+  .content {
+    width: calc(100% - 5px);
+    height: calc(100% - 5px);
   }
 </style>
 
