@@ -3,10 +3,10 @@ import frame15 from "@app/assets/frame-15.webp";
 import frame141 from "@app/assets/frame-141.webp";
 
 interface Props {
-  aspect: "default" | "video";
+  aspect?: "default" | "video";
 }
 
-const { aspect } = Astro.props;
+const { aspect = "default" } = Astro.props;
 ---
 
 <section
