@@ -30,8 +30,18 @@ const projectsCollection = defineCollection({
         .optional(),
     }),
 });
+
+const pagesCollection = defineCollection({
+  type: "content",
+  schema: () =>
+    z.object({
+      title: z.string(),
+      position: z.number(),
+    }),
+});
 // 3. Export a single `collections` object to register your collection(s)
 //    This key should match your collection directory name in "src/content"
 export const collections = {
   projects: projectsCollection,
+  pages: pagesCollection,
 };

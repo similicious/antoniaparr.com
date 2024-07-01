@@ -87,3 +87,24 @@ collections:
               name: description
               required: false
               widget: string
+  - name: page
+    label: Seiten
+    folder: src/content/pages
+    create: true
+    sortable_fields:
+      - position
+    fields:
+      - label: Name
+        name: title
+        widget: string
+      - label: Inhalt
+        name: body
+        widget: markdown
+      - label: Position in Menü
+        hint: Jede Position darf nur ein mal vergeben werden, 1 ist reserviert für die Startseite
+        name: position
+        widget: number
+        default: 1
+        value_type: int
+        min: 1
+        step: 1

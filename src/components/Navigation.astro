@@ -1,5 +1,34 @@
 ---
+import { getCollection } from "astro:content";
 import SidebarToggle from "./SidebarToggle.astro";
+import { createSlug } from "@app/util/create-slug";
+
+interface Link {
+  label: string;
+  href: string;
+}
+
+const pages = await getCollection("pages");
+
+const numberOfPages = Math.max(...pages.map((page) => page.data.position));
+const links = [...Array(numberOfPages).keys()]
+  .map((_, index) => {
+    const page = pages.find((p) => p.data.position === index + 1);
+
+    if (!page) {
+      return;
+    }
+
+    if (index === 0) {
+      return { label: page.data.title, href: "/" };
+    }
+
+    return {
+      label: page.data.title,
+      href: `/${createSlug(page.data.title)}`,
+    };
+  })
+  .filter(Boolean) as Link[];
 ---
 
 <div class="overlay">
@@ -7,10 +36,13 @@ import SidebarToggle from "./SidebarToggle.astro";
     <SidebarToggle position="aside" />
     <nav>
       <ul>
-        <li><a href="/">Startseite</a></li>
-        <li><a href="/ueber-mich">Über mich</a></li>
-        <li><a href="/projekte">Projekte</a></li>
-        <li><a href="/kontakt">Kontakt</a></li>
+        {
+          links.map((link) => (
+            <li>
+              <a href={link.href}>{link.label}</a>
+            </li>
+          ))
+        }
       </ul>
     </nav>
   </aside>

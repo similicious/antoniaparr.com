@@ -1,0 +1,31 @@
+---
+import LayoutContent from "@app/layouts/LayoutContent.astro";
+import LayoutHomepage from "@app/layouts/LayoutHomepage.astro";
+import { createSlug } from "@app/util/create-slug";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const pages = await getCollection("pages");
+  return pages.map((page) => ({
+    params: {
+      slug: page.data.position === 1 ? undefined : createSlug(page.data.title),
+    },
+    props: { page },
+  }));
+}
+
+const { page } = Astro.props;
+const { Content } = await page.render();
+---
+
+{
+  page.data.position === 1 ? (
+    <LayoutHomepage>
+      <Content />
+    </LayoutHomepage>
+  ) : (
+    <LayoutContent title={page.data.title}>
+      <Content />
+    </LayoutContent>
+  )
+}

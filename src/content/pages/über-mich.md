@@ -2,6 +2,7 @@
 title: Über mich
 position: 3
 ---
+
 ### Hallo und willkommen auf meiner Homepage.
 
 Ich bin Antonia, 1995 in der Lüneburger Heide geboren und habe nach dem Abitur mit meinem Modedesignstudium und einer Ausbildung als Maßschneiderin meine berufliche Laufbahn eingeschlagen. Mit Beendigung meines Studiums 2017 ging ich für anderthalb Jahre als Maßschneiderin an die städtischen Bühnen Osnabrück und schnupperte das erste mal Kostümluft.
