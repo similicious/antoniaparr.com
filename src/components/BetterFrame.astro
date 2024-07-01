@@ -1,8 +1,25 @@
 ---
-import frame from "@app/assets/frame-prop.webp";
+import frame15 from "@app/assets/frame-15.webp";
+import frame141 from "@app/assets/frame-141.webp";
+
+interface Props {
+  aspect: "default" | "video";
+}
+
+const { aspect } = Astro.props;
 ---
 
-<section class="frame-container" style={`--frame-url: url(${frame.src})`}>
+<section
+  class=""
+  class:list={[
+    "frame-container",
+    {
+      "aspect-default": aspect === "default",
+      "aspect-video": aspect === "video",
+    },
+  ]}
+  style={`--frame-url: url(${aspect === "video" ? frame141.src : frame15.src})`}
+>
   <div class="content">
     <slot />
   </div>
@@ -11,10 +28,18 @@ import frame from "@app/assets/frame-prop.webp";
 <style>
   .frame-container {
     position: relative;
-    aspect-ratio: 1.5;
+
     display: flex;
     justify-content: center;
     align-items: center;
+  }
+
+  .aspect-default {
+    aspect-ratio: 1.5;
+  }
+
+  .aspect-video {
+    aspect-ratio: 1.4158653846;
   }
 
   .frame-container::after {
