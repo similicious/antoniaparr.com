@@ -3,7 +3,7 @@ import { Image } from "astro:assets";
 import { getCollection } from "astro:content";
 
 import Cloud from "@app/components/Cloud.astro";
-import Layout from "@app/layouts/Layout.astro";
+import LayoutBase from "@app/layouts/LayoutBase.astro";
 import Infobox from "@app/components/Infobox.astro";
 import { createSlug } from "@app/util/create-slug";
 import Carousel from "@app/components/Carousel.astro";
@@ -21,7 +21,7 @@ const imageWidth = "width: 100%; height: auto;";
 const { entry } = Astro.props;
 ---
 
-<Layout title={entry.data.title} showTagline={false}>
+<LayoutBase title={entry.data.title} showTagline={false}>
   <Cloud slot="header">
     <a href="/projekte">Projekte</a>
   </Cloud>
@@ -93,7 +93,7 @@ const { entry } = Astro.props;
       </div>
     </div>
   </div>
-</Layout>
+</LayoutBase>
 
 <style>
   .icon-container {

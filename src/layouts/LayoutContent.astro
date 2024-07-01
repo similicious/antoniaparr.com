@@ -1,0 +1,27 @@
+---
+import Cloud from "@app/components/Cloud.astro";
+import Infobox from "@app/components/Infobox.astro";
+import LayoutBase from "@app/layouts/LayoutBase.astro";
+
+interface Props {
+  title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<LayoutBase showTagline={false} title={title}>
+  <Cloud slot="header"><a href="/">{title}</a></Cloud>
+
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8">
+        <Infobox shadow={true}>
+          <div class="p-4">
+            <slot />
+          </div>
+        </Infobox>
+      </div>
+    </div>
+  </div>
+</LayoutBase>

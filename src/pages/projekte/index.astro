@@ -2,9 +2,9 @@
 import { getCollection } from "astro:content";
 import { Image } from "astro:assets";
 import { createSlug } from "@app/util/create-slug";
-import Layout from "@app/layouts/Layout.astro";
 import Cloud from "@app/components/Cloud.astro";
 import Infobox from "@app/components/Infobox.astro";
+import LayoutBase from "@app/layouts/LayoutBase.astro";
 
 const projects = await getCollection("projects").then((collection) => {
   return collection
@@ -16,7 +16,7 @@ const projects = await getCollection("projects").then((collection) => {
 });
 ---
 
-<Layout title="Projekte" showTagline={false}>
+<LayoutBase title="Projekte" showTagline={false}>
   <Cloud slot="header"><a href="/">Projekte</a></Cloud>
 
   <div class="container">
@@ -43,7 +43,7 @@ const projects = await getCollection("projects").then((collection) => {
       </div>
     </div>
   </div>
-</Layout>
+</LayoutBase>
 
 <style>
   .project-link {
