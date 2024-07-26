@@ -10,20 +10,20 @@
     "astro": "astro"
   },
   "dependencies": {
-    "@astrojs/check": "^0.7.0",
+    "@astrojs/check": "^0.8.3",
     "@astrojs/sitemap": "^3.1.6",
-    "astro": "^4.11.3",
+    "astro": "^4.12.2",
     "astro-purgecss": "^4.1.1",
     "bootstrap": "^5.3.3",
-    "embla-carousel": "^8.1.6",
-    "embla-carousel-autoplay": "^8.1.6",
+    "embla-carousel": "^8.1.7",
+    "embla-carousel-autoplay": "^8.1.7",
     "purgecss": "^6.0.0",
-    "typescript": "^5.5.3"
+    "typescript": "^5.5.4"
   },
   "devDependencies": {
     "@types/bootstrap": "^5",
-    "prettier": "^3.3.2",
-    "prettier-plugin-astro": "^0.14.0"
+    "prettier": "^3.3.3",
+    "prettier-plugin-astro": "^0.14.1"
   },
   "packageManager": "yarn@4.3.1"
 }
