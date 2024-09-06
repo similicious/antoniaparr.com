@@ -4,17 +4,27 @@ import Layout from "@app/layouts/LayoutBase.astro";
 import Cloud from "@app/components/Cloud.astro";
 import Infobox from "@app/components/Infobox.astro";
 
-import videoMp4 from "@app/assets/homepage-video.mp4";
-import BetterFrame from "@app/components/BetterFrame.astro";
+import Carousel from "@app/components/Carousel.astro";
+
+interface Props {
+  gallery?: { image: ImageMetadata; description?: string }[];
+}
+
+const { gallery } = Astro.props;
 ---
 
 <Layout title="Startseite" showTagline={true}>
-  <!-- Video -->
-  <BetterFrame slot="header" aspect="video">
-    <video muted autoplay loop>
-      <source src={videoMp4} type="video/mp4" />
-    </video>
-  </BetterFrame>
+  <!-- Gallery -->
+  {
+    gallery && (
+      <Carousel
+        images={gallery}
+        alt="Vorgestelltes Projekt"
+        hideButtons={true}
+        slot="header"
+      />
+    )
+  }
 
   <!-- Cloud -->
   <div class="cloud-container">

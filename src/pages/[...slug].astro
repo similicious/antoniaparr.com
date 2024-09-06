@@ -16,15 +16,16 @@ export async function getStaticPaths() {
 
 const { page } = Astro.props;
 const { Content } = await page.render();
+const gallery = page.data.gallery?.map((a) => a.imageAndDescription);
 ---
 
 {
   page.data.position === 1 ? (
-    <LayoutHomepage>
+    <LayoutHomepage gallery={gallery}>
       <Content />
     </LayoutHomepage>
   ) : (
-    <LayoutContent title={page.data.title}>
+    <LayoutContent title={page.data.title} gallery={gallery}>
       <Content />
     </LayoutContent>
   )

@@ -1,17 +1,50 @@
 ---
+import Carousel from "@app/components/Carousel.astro";
 import Cloud from "@app/components/Cloud.astro";
 import Infobox from "@app/components/Infobox.astro";
 import LayoutBase from "@app/layouts/LayoutBase.astro";
 
 interface Props {
   title: string;
+  gallery?: { image: ImageMetadata; description?: string }[];
 }
 
-const { title } = Astro.props;
+const { title, gallery } = Astro.props;
 ---
 
 <LayoutBase showTagline={false} title={title}>
-  <Cloud slot="header"><a href="/">{title}</a></Cloud>
+  <!-- cloud if Gallery is not present -->
+  {
+    !gallery && (
+      <Cloud slot="header">
+        <a href="/">{title}</a>
+      </Cloud>
+    )
+  }
+
+  <!-- optional Gallery  -->
+  {
+    gallery && (
+      <Carousel images={gallery} alt="" hideButtons={true} slot="header" />
+    )
+  }
+
+  <!-- cloud if Gallery is present-->
+  {
+    gallery && (
+      <div class="cloud-container mb-4">
+        <div class="container">
+          <div class="row justify-content-center">
+            <div class="col-7 col-md-5 col-lg-3">
+              <Cloud>
+                <a href="/">{title}</a>
+              </Cloud>
+            </div>
+          </div>
+        </div>
+      </div>
+    )
+  }
 
   <div class="container">
     <div class="row justify-content-center">
@@ -25,3 +58,9 @@ const { title } = Astro.props;
     </div>
   </div>
 </LayoutBase>
+
+<style>
+  .cloud-container {
+    margin-top: -5.5rem;
+  }
+</style>

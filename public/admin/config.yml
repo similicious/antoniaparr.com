@@ -108,3 +108,25 @@ collections:
         value_type: int
         min: 1
         step: 1
+      - label: Gallerie
+        name: gallery
+        widget: list
+        required: false
+        allow_add: true
+        field:
+          label: Bild und Beschreibung
+          name: imageAndDescription
+          widget: object
+          fields:
+            - label: Image
+              name: image
+              widget: image
+              choose_url: false
+              allow_multiple: false
+              media_library:
+                config:
+                  max_file_size: 2000000
+            - label: Beschreibung
+              name: description
+              required: false
+              widget: string

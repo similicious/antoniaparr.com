@@ -7,23 +7,37 @@ import BetterFrame from "./BetterFrame.astro";
 interface Props {
   images: { image: ImageMetadata; description?: string }[];
   alt: string;
+  hideButtons?: boolean;
 }
 
-const { images, alt } = Astro.props;
+const { images, alt, hideButtons = false } = Astro.props;
 ---
 
 <div class="row gx-1 justify-content-center">
-  <div class="col-1 d-flex justify-content-center">
-    <button class="button-previous">
-      <Image
-        src={arrowLeft}
-        alt="Vorheriges Bild"
-        loading="eager"
-        style={imageWidth}
-      />
-    </button>
-  </div>
-  <div class="col-10">
+  {
+    !hideButtons && (
+      <div class="col-1 d-flex justify-content-center">
+        <button class="button-previous">
+          <Image
+            src={arrowLeft}
+            alt="Vorheriges Bild"
+            loading="eager"
+            style={imageWidth}
+          />
+        </button>
+      </div>
+    )
+  }
+
+  <div
+    class=""
+    class:list={[
+      {
+        "col-10": !hideButtons,
+        "col-12": hideButtons,
+      },
+    ]}
+  >
     <BetterFrame>
       <section class="embla">
         <div class="embla__container">
@@ -43,16 +57,20 @@ const { images, alt } = Astro.props;
       </section>
     </BetterFrame>
   </div>
-  <div class="col-1 d-flex justify-content-center">
-    <button class="button-next">
-      <Image
-        src={arrowRight}
-        alt="Vorheriges Bild"
-        loading="eager"
-        style={imageWidth}
-      />
-    </button>
-  </div>
+  {
+    !hideButtons && (
+      <div class="col-1 d-flex justify-content-center">
+        <button class="button-next">
+          <Image
+            src={arrowRight}
+            alt="Vorheriges Bild"
+            loading="eager"
+            style={imageWidth}
+          />
+        </button>
+      </div>
+    )
+  }
 </div>
 
 <style>

@@ -1,6 +1,19 @@
 // 1. Import utilities from `astro:content`
-import { z, defineCollection } from "astro:content";
+import { z, defineCollection, type ImageFunction } from "astro:content";
 // 2. Define your collection(s)
+
+const galleryField = (image: ImageFunction) =>
+  z
+    .array(
+      z.object({
+        imageAndDescription: z.object({
+          image: image(),
+          description: z.string().optional(),
+        }),
+      }),
+    )
+    .optional();
+
 const projectsCollection = defineCollection({
   type: "content",
   schema: ({ image }) =>
@@ -18,25 +31,17 @@ const projectsCollection = defineCollection({
         )
         .optional(),
       icon: image(),
-      gallery: z
-        .array(
-          z.object({
-            imageAndDescription: z.object({
-              image: image(),
-              description: z.string().optional(),
-            }),
-          }),
-        )
-        .optional(),
+      gallery: galleryField(image),
     }),
 });
 
 const pagesCollection = defineCollection({
   type: "content",
-  schema: () =>
+  schema: ({ image }) =>
     z.object({
       title: z.string(),
       position: z.number(),
+      gallery: galleryField(image),
     }),
 });
 // 3. Export a single `collections` object to register your collection(s)
