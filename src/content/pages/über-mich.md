@@ -1,6 +1,9 @@
 ---
 title: Über mich
 position: 3
+gallery:
+  - imageAndDescription:
+      image: src/assets/user/antonia.webp
 ---
 
 ### Hallo und willkommen auf meiner Homepage.
