@@ -1534,10 +1534,10 @@ __metadata:
     "@astrojs/sitemap": "npm:^3.1.6"
     "@types/bootstrap": "npm:^5"
     astro: "npm:4.15.3"
-    astro-purgecss: "npm:^4.1.1"
+    astro-purgecss: "npm:^4.5.0"
     bootstrap: "npm:^5.3.3"
-    embla-carousel: "npm:^8.1.7"
-    embla-carousel-autoplay: "npm:^8.1.7"
+    embla-carousel: "npm:^8.2.1"
+    embla-carousel-autoplay: "npm:^8.2.1"
     prettier: "npm:^3.3.3"
     prettier-plugin-astro: "npm:^0.14.1"
     purgecss: "npm:^6.0.0"
@@ -1594,13 +1594,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"astro-purgecss@npm:^4.1.1":
-  version: 4.1.1
-  resolution: "astro-purgecss@npm:4.1.1"
+"astro-purgecss@npm:^4.5.0":
+  version: 4.5.0
+  resolution: "astro-purgecss@npm:4.5.0"
   peerDependencies:
     astro: ^4.0.0
     purgecss: ^6.0.0
-  checksum: 10c0/790885c3731dafc983bafe29790e5cb4fa1f91a8dfed4a348edfb28c5319b92dcc4599df21019d6f036008fb2ce3bc76d21cfc4e05d5f57ccb9fc142e631c413
+  checksum: 10c0/6868a1ff9acdb1cf0c062181df2cb2333d172288f3a128635b9e0b03da75c429f0402d708a5aa5b52cce9a56964e8da7891c0fdf5cd7e0151ca964426f7957aa
   languageName: node
   linkType: hard
 
@@ -2151,19 +2151,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"embla-carousel-autoplay@npm:^8.1.7":
-  version: 8.1.7
-  resolution: "embla-carousel-autoplay@npm:8.1.7"
+"embla-carousel-autoplay@npm:^8.2.1":
+  version: 8.2.1
+  resolution: "embla-carousel-autoplay@npm:8.2.1"
   peerDependencies:
-    embla-carousel: 8.1.7
-  checksum: 10c0/ba3918081cec8a0e70eb925a4a83d09d334e3fccbbbdaff0049a4d3af5adb87b794a3e9ce30c4f6e1cc67025cdeb7d4d8a5ab2704454d0420f6e7c5fd16e74ab
+    embla-carousel: 8.2.1
+  checksum: 10c0/13d84714ac650bc03c6a57fc11f8c71c34489b859dce6f48f7aa8894da58a1ddc6026a0546246d6d6c7e1a38330d5e37917b7aaa7df7931e92915fb5d1f005c5
   languageName: node
   linkType: hard
 
-"embla-carousel@npm:^8.1.7":
-  version: 8.1.7
-  resolution: "embla-carousel@npm:8.1.7"
-  checksum: 10c0/80dadf688241c6fd918c5e44919f3da00baba8d13d830c12d0455ac12ab6bb7460a4d836e7311c29a5b10df7c401e33a5b13cdeac115080f2b64d5e5c0ddb913
+"embla-carousel@npm:^8.2.1":
+  version: 8.2.1
+  resolution: "embla-carousel@npm:8.2.1"
+  checksum: 10c0/7b480be5a57b9d1f12f880f2048e6019cc53b41bd1a30a1b1bd5f0b93328bda40761e82ab1457918ce3e1469afbce457665fdf16a349f7c7ed3ce6ab8930da41
   languageName: node
   linkType: hard
 

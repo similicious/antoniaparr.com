@@ -13,10 +13,10 @@
     "@astrojs/check": "0.9.3",
     "@astrojs/sitemap": "^3.1.6",
     "astro": "4.15.3",
-    "astro-purgecss": "^4.1.1",
+    "astro-purgecss": "^4.5.0",
     "bootstrap": "^5.3.3",
-    "embla-carousel": "^8.1.7",
-    "embla-carousel-autoplay": "^8.1.7",
+    "embla-carousel": "^8.2.1",
+    "embla-carousel-autoplay": "^8.2.1",
     "purgecss": "^6.0.0",
     "typescript": "^5.5.4"
   },
