@@ -4,12 +4,7 @@ client: "Kunstausstellung "
 date: 2024-09-14T14:00:00.000Z
 description: >
   Die Diagnose von ADHS im Alter von 27 Jahren brachte eine neue Perspektive in
-  Antonias Leben. Während der Pandemie erlebte sie ein kreatives Wiedererwachen,
-  das ihr half, die Herausforderungen des Alltags zu bewältigen. Kreatives
-  Arbeiten wurde für sie zu einem Weg, ihre Gedanken zu ordnen und ihren Geist
-  zu beschäftigen.
-
-  In ihrer Ausstellung „fragments of focus“ legt sich Antonia bewusst nicht auf ein Medium fest. Ihre Werke entstehen aus Textilien, auf Leinwänden und in Form von Installationen – jedes Stück ein Ausdruck ihrer unsortierten Gedankenwelt. 
+  Antonias Leben.
 category: Kostüm
 links: []
 icon: src/assets/user/img_0510.jpeg
