@@ -1,9 +1,11 @@
 ---
-title: Eigene Kollektion 3
+title: "Eigene Kollektion "
 date: 2023-04-12T19:58:00.000Z
 description: >-
   In der gezeigten Kollektion sind alle Kleidungsstücke aus hochwertigen
-  Materialien wie Seide handgefertigt. 
+  Materialien wie Seide gefertigt. Bei jedem Stück steht das Handwerk im Fokus.
+  Techniken wie häkeln, sowie sticken lassen die gesamte Kollektion aus
+  handgefertigten Einzelteilen bestehen.
 
   Die Schnitte sind so konzipiert, dass sie geschlechtsübergreifend tragbar sind.
 category: Modedesign
