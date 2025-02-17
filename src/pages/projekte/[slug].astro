@@ -49,7 +49,7 @@ const { entry } = Astro.props;
             <div class="col-12 col-lg-8 col-xl-6">
               <Carousel
                 images={entry.data.gallery.map(
-                  (item) => item.imageAndDescription
+                  (item) => item.imageAndDescription,
                 )}
                 alt={entry.data.title}
               />
