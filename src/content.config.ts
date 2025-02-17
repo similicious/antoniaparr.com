@@ -1,4 +1,5 @@
 // 1. Import utilities from `astro:content`
+import { glob } from "astro/loaders";
 import { z, defineCollection, type ImageFunction } from "astro:content";
 // 2. Define your collection(s)
 
@@ -15,7 +16,7 @@ const galleryField = (image: ImageFunction) =>
     .optional();
 
 const projectsCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "*.md", base: "./src/content/projects" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),
@@ -36,7 +37,7 @@ const projectsCollection = defineCollection({
 });
 
 const pagesCollection = defineCollection({
-  type: "content",
+  loader: glob({ pattern: "*.md", base: "./src/content/pages" }),
   schema: ({ image }) =>
     z.object({
       title: z.string(),

@@ -2,7 +2,7 @@
 import LayoutContent from "@app/layouts/LayoutContent.astro";
 import LayoutHomepage from "@app/layouts/LayoutHomepage.astro";
 import { createSlug } from "@app/util/create-slug";
-import { getCollection } from "astro:content";
+import { getCollection, render } from "astro:content";
 
 export async function getStaticPaths() {
   const pages = await getCollection("pages");
@@ -15,7 +15,7 @@ export async function getStaticPaths() {
 }
 
 const { page } = Astro.props;
-const { Content } = await page.render();
+const { Content } = await render(page);
 const gallery = page.data.gallery?.map((a) => a.imageAndDescription);
 ---
 
