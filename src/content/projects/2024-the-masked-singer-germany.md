@@ -2,7 +2,9 @@
 title: The Masked Singer Germany
 client: Angel Garcia
 date: 2024-03-30T22:48:00.000Z
-description: Kostümfertigungen für die Background Tänzerinnen von TMS Deutschland.
+description: |-
+  Kostümfertigungen für die Background Tänzerinnen von TMS Deutschland.
+  Beschäftigt seit 2023 bis heute
 category: Kostüm
 icon: src/assets/user/tms-min.png
 gallery:
