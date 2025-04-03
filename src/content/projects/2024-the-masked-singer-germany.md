@@ -20,4 +20,10 @@ gallery:
       image: src/assets/user/857d57e3-e15f-4fe5-9eb3-2359f7c10623.jpeg
   - imageAndDescription:
       image: src/assets/user/e9ba8efa-9383-48c8-b847-89e4e031f952.jpeg
+  - imageAndDescription:
+      image: src/assets/user/7cae79c2-7d8d-4a88-9f7e-340807453a9c.jpeg
+  - imageAndDescription:
+      image: src/assets/user/637ccbfa-d0f9-440c-84ea-4b783a145ac2.jpeg
+  - imageAndDescription:
+      image: src/assets/user/7f4dd659-b6f5-42bc-86d6-164961202f01.jpeg
 ---
