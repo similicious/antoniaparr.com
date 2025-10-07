@@ -9,4 +9,6 @@ icon: src/assets/user/img_3116.jpeg
 gallery:
   - imageAndDescription:
       image: src/assets/user/img_3118.jpeg
+  - imageAndDescription:
+      image: src/assets/user/img_3116.jpeg
 ---
