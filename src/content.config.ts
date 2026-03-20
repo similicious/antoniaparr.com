@@ -1,8 +1,9 @@
 // 1. Import utilities from `astro:content`
 import { glob } from "astro/loaders";
-import { z, defineCollection, type ImageFunction } from "astro:content";
-// 2. Define your collection(s)
+import { defineCollection, type ImageFunction } from "astro:content";
+import { z } from 'astro/zod'
 
+// 2. Define your collection(s)
 const galleryField = (image: ImageFunction) =>
   z
     .array(
@@ -32,6 +33,7 @@ const projectsCollection = defineCollection({
         )
         .optional(),
       icon: image(),
+      isDrawnIcon: z.boolean().default(true),
       gallery: galleryField(image),
     }),
 });

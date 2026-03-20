@@ -35,6 +35,7 @@ const { entry } = Astro.props;
           src={entry.data.icon}
           alt={`Illustration von ${entry.data.title}`}
           style={imageWidth}
+          class:list={{ notDrawn: !entry.data.isDrawnIcon }}
         />
       </div>
     </div>
@@ -110,5 +111,15 @@ const { entry } = Astro.props;
   .gallery-container {
     background-color: var(--color-blue);
     padding: 2rem 0;
+  }
+
+  img.notDrawn {
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: top;
+    border: 1px solid black;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1;
   }
 </style>

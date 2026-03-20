@@ -59,6 +59,7 @@ description: >-
 category: Kostüm
 links: []
 icon: src/assets/user/img_0510.jpeg
+isDrawnIcon: false
 gallery:
   - imageAndDescription:
       image: src/assets/user/img_0595.jpeg
