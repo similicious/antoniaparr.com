@@ -68,7 +68,6 @@ collections:
       - label: Icon ist gemalt?
         name: isDrawnIcon
         widget: boolean
-        default: true
         hint: Falls du noch kein rundes gemaltes Icon hast, wähle "nein" aus. Dann stellt die Webseite das Bild in einem Kreis dar.
       - label: Gallerie
         name: gallery

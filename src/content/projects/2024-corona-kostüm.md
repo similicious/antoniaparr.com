@@ -4,6 +4,7 @@ client: WDR
 date: 2021-06-23T21:35:00.000Z
 category: Kostüm
 icon: src/assets/user/corona-kostum-min.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/dbb0cb36-9f1f-4330-bd59-7c63c07c8059.jpeg

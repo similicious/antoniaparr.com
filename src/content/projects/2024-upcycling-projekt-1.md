@@ -5,6 +5,7 @@ description: Im Zuge einer Modenschau in Hannover habe ich eine Kollektion aus
   ausschließlich upgecycelten Materialien entworfen und gefertigt.
 category: Modedesign
 icon: src/assets/user/upcycling-projekt-min-2.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/165392ad-f039-43b7-94b0-75fef5e69c00.jpeg

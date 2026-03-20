@@ -11,6 +11,7 @@ links:
       linkTitle: Herbery Instagram
       link: https://www.instagram.com/herbery.de/
 icon: src/assets/user/herby-min.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/3d830c05-9f2e-4698-864d-be060b1e663c.jpeg

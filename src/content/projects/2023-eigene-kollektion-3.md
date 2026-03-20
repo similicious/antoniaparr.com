@@ -10,6 +10,7 @@ description: >-
   Die Schnitte sind so konzipiert, dass sie geschlechtsübergreifend tragbar sind.
 category: Modedesign
 icon: src/assets/user/handmade-fashion.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/8fd16804-0d51-443c-803e-8a0c82329af3.jpeg

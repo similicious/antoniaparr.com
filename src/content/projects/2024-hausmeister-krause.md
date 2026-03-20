@@ -8,6 +8,7 @@ links:
       link: https://www.youtube.com/watch?v=UlGAVSpzNmA
       linkTitle: Trailer (YouTube)
 icon: src/assets/user/hausmeister-krause.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/hausmeister-kraus-2.jpg

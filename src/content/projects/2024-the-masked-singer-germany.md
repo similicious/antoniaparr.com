@@ -7,6 +7,7 @@ description: |-
   Beschäftigt seit 2023 bis heute
 category: Kostüm
 icon: src/assets/user/tms-min.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/2d9cb3bf-08e1-4472-95b1-7f8ffa6c2b0a.jpeg

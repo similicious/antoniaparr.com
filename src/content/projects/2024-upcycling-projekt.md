@@ -9,6 +9,7 @@ description: >-
   Inspiriert von der Installationen der Künstlerin Pippilotti Rist, enthält die gesamte Kollektion einen Clash aus hartem und fließendem Material, sowie den Kontrast zwischen organischen und statischen Formen.
 category: Modedesign
 icon: src/assets/user/abschlusskollektion-min.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/f77d7aca-2d8d-4e47-b255-ed8b95fe9946.jpeg

@@ -3,6 +3,7 @@ title: Set Aside
 date: 2016-06-23T21:37:00.000Z
 category: Modedesign
 icon: src/assets/user/set-aside-min.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/bc6029a6-41ec-4f9b-a426-b299a2838cf8.jpeg

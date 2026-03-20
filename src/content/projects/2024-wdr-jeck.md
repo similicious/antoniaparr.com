@@ -7,6 +7,7 @@ description: |-
   Kostümassistenz: Kai Rudat
 category: Kostüm
 icon: src/assets/user/wdr-jeck-min.png
+isDrawnIcon: true
 gallery:
   - imageAndDescription:
       image: src/assets/user/9ed4f0aa-6b7c-4e6e-a178-3c01bb6d1d1a.jpeg

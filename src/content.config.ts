@@ -33,7 +33,7 @@ const projectsCollection = defineCollection({
         )
         .optional(),
       icon: image(),
-      isDrawnIcon: z.boolean().default(true),
+      isDrawnIcon: z.boolean(),
       gallery: galleryField(image),
     }),
 });
