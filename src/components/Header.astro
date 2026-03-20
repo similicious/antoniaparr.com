@@ -8,7 +8,7 @@ interface Props {
 const { showTagline } = Astro.props;
 ---
 
-<section class="header py-4">
+<header class="header py-4">
   {showTagline && <h2 class="tagline">Kostüme • Styling • Mode • Kunst</h2>}
   <div class="container">
     <div class="row g-0">
@@ -20,7 +20,7 @@ const { showTagline } = Astro.props;
       </div>
     </div>
   </div>
-</section>
+</header>
 
 <style>
   .tagline {
