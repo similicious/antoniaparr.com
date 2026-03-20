@@ -19,6 +19,7 @@ gallery:
   - imageAndDescription:
       image: src/assets/user/1514e6b3-651a-4702-97b3-1e9074d8253d.jpeg
 ---
+
 ### Hi und Willkommen!
 
 Ich bin Antonia und ich entwerfe, fertige sowie style leidenschaftlich alles was mit Kostümen und Mode zutun hat.

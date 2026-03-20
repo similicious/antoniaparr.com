@@ -62,7 +62,8 @@ icon: src/assets/user/img_0510.jpeg
 gallery:
   - imageAndDescription:
       image: src/assets/user/img_0595.jpeg
-      description: Installation MAZE OF MY MIND Willkommen in der Welt von "Maze of My
+      description:
+        Installation MAZE OF MY MIND Willkommen in der Welt von "Maze of My
         Mind“, einer immersiven Kunstinstallation, die dich in das innere
         Labyrinth eines Gehirns mit weiblich sozialisiertem ADHS entführt. Hier
         gibt es keine geraden Linien, keine klaren Wege – stattdessen findest du
