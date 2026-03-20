@@ -24,13 +24,14 @@ const projects = await getCollection("projects").then((collection) => {
       <div class="col-8 col-sm-10">
         <div class="row g-5 row-cols-1 row-cols-sm-2 row-cols-lg-3">
           {
-            projects.map((project) => (
+            projects.map((project, index) => (
               <div class="col">
                 <a class="project-link" href={`/projekte/${project.slug}`}>
                   <Image
                     src={project.data.icon}
                     alt={project.data.title}
                     class:list={{ notDrawn: !project.data.isDrawnIcon }}
+                    loading={index <= 5 ? "eager" : "lazy"}
                   />
                   <div class="project-title">
                     <Infobox>
