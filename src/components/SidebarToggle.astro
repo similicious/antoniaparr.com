@@ -9,7 +9,11 @@ interface Props {
 const { position } = Astro.props;
 ---
 
-<button class="hamburger-button mb-4" data-position={position}>
+<button
+  class="hamburger-button mb-4"
+  data-position={position}
+  aria-label="Menü öffnen"
+>
   <Fragment set:html={position === "header" ? hamburger : x} />
 </button>
 
