@@ -3,7 +3,7 @@ title: About
 position: 3
 gallery:
   - imageAndDescription:
-      image: src/assets/user/img_0900.jpeg
+      image: src/assets/user/antonia.webp
 ---
 
 ### Hallo und willkommen auf meiner Homepage.
